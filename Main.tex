@@ -1,0 +1,144 @@
+\documentclass[11pt,oneside,openany]{book} % Prevent blank pages and enforce single-sided layout
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[a4paper, left=0.75in, right=0.75in, top=0in, bottom=2.5in]{geometry}
+% Set 1-inch margins
+
+\usepackage{comment}
+\usepackage{minted}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[small,bf]{caption}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{cite}
+\usepackage[spanish]{datetime}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage[spanish]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\usepackage{scrhack} % Previene algunos errores
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{subcaption}
+\usepgfplotslibrary{groupplots}
+
+\renewcommand{\baselinestretch}{1} % Adjusts line spacing if needed
+
+\setlength{\parindent}{20pt} % Ensure indentation
+\setlength{\parskip}{0pt}    % Ensure paragraph spacing
+\raggedbottom               % Prevent uneven bottom margins
+
+\input{defs.tex}
+\input{estiloscodigoprogramacion}
+
+\captionsetup{labelfont={bf,small},textfont=small}
+
+
+% Define a custom color
+\definecolor{blueish}{RGB}{0, 102, 204}
+
+% Customize chapter, section, and subsection titles
+
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries\color{blueish}}
+  {\thechapter}{1em}{}
+
+  \titlespacing*{\chapter}{0pt}{-10pt}{5pt} % Left, before title, after title spacing
+\titleformat{\section}[block]
+  {\normalfont\Large\color{blueish}}
+  {\thesection}{1em}{}
+  
+
+  \titlespacing*{\section}{0pt}{15pt}{5pt} % Left, before title, after title spacing
+  
+\titleformat{\subsection}[block]
+  {\normalfont\large\itshape\color{blueish}}
+  {\thesubsection}{1em}{}
+
+  \titlespacing*{\subsection}{0pt}{15pt}{5pt} % Left, before title, after title spacing
+% Set up headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+
+% Top header
+\fancyhead[L]{\color{blueish}\leftmark} % Chapter name on the left (blueish)
+\fancyhead[R]{\includegraphics[height=1cm]{Figuras/logos/logo_peque_R.png}} % Logo on the right
+
+% Bottom footer
+\fancyfoot[L]{\color{blueish}\thepage} % Page number on the left (blueish)
+
+% Add thick blue lines for top and bottom
+\renewcommand{\headrulewidth}{1.5pt} % Thickness of the top line
+\renewcommand{\headrule}{\hbox to\headwidth{\color{blueish}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{1.5pt} % Thickness of the bottom line
+\renewcommand{\footrule}{\hbox to\headwidth{\color{blueish}\leaders\hrule height \footrulewidth\hfill}}
+
+% Force fancyhdr globally, even after \chapter
+\makeatletter
+\let\orig@chapter=\chapter
+\renewcommand{\chapter}{%
+  \clearpage % Ensure chapters start on a new page
+  \thispagestyle{fancy}% Apply fancy page style to the current chapter
+  \orig@chapter
+}
+\makeatother
+
+% Force page style on title pages
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\color{blueish}\leftmark}
+  \fancyhead[R]{\includegraphics[height=1cm]{Figuras/logos/logo_peque_R.png}}
+  \fancyfoot[L]{\color{blueish}\thepage}
+  \renewcommand{\headrulewidth}{1.5pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{blueish}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{blueish}\leaders\hrule height \footrulewidth\hfill}}
+}
+
+% Header settings
+\setlength{\headheight}{30pt} % Space for the header
+\setlength{\headsep}{20pt}    % Space between header and text
+\setlength{\topmargin}{-0.5cm} % Adjust top margin
+
+% Fancyhdr configuration
+\pagestyle{fancy}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%
+%    TEMPLATE     %
+%%%%%%%%%%%%%%%%%%%
+
+% Apply fancy style for title page
+
+% Title Page (example)
+\input{titlepage}
+\newpage
+
+% Table of Contents (optional)
+\pagestyle{fancy} % Ensure fancy style is applied
+\tableofcontents
+\newpage
+
+% Main Content
+\input{content}
+
+% Add blind text for testing (optional)
+%\blindtext[10]
+
+\end{document}
