@@ -7,15 +7,15 @@ Esta plantilla está diseñada para la elaboración de memorias académicas para
 ## Estructura de la plantilla
 
 ```
-├── Main.tex                  # Archivo principal de compilación
-├── content.tex               # Contenido de la memoria (capítulos)
-├── titlepage.tex             # Configuración de la portada
-├── defs.tex                  # Definiciones matemáticas y colores
-├── estiloscodigoprogramacion.tex # Estilos para insertar código fuente
-├── configuracioninicial.tex  # Configuración general del documento
-├── UAL.sty                   # Estilo personalizado para la UAL
+├── Main.tex                          # Archivo principal de compilación
+├── content.tex                       # Contenido de la memoria (capítulos)
+├── titlepage.tex                     # Configuración de la portada
+├── defs.tex                          # Definiciones matemáticas y colores
+├── estiloscodigoprogramacion.tex     # Estilos para insertar código fuente
+├── configuracioninicial.tex          # Configuración general del documento
+├── UAL.sty                           # Estilo personalizado para la UAL
 └── Figuras/
-    └── logos/                # Logotipos e imágenes institucionales
+    └── logos/                        # Logotipos e imágenes institucionales
 ```
 
 ## Características
