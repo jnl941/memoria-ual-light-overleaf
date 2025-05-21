@@ -1,5 +1,6 @@
 # Plantilla LaTeX para Memorias UAL
 
+![foto portada plantilla](https://github.com/jnl941/memoria-ual-light-overleaf/blob/main/portada.png)
 Esta plantilla está diseñada para la elaboración de memorias académicas para la Universidad de Almería (UAL). La plantilla es ligera y compatible con la versión gratuita de Overleaf. Hay un ejemplo visible en [UALmemoriaPlantilla.pdf](UALmemoriaPlantilla.pdf)
 
 
