@@ -1,6 +1,7 @@
 # Plantilla LaTeX para Memorias UAL
 
-Esta plantilla está diseñada para la elaboración de memorias académicas para la Universidad de Almería (UAL). La plantilla es ligera y compatible con la versión gratuita de Overleaf.
+Esta plantilla está diseñada para la elaboración de memorias académicas para la Universidad de Almería (UAL). La plantilla es ligera y compatible con la versión gratuita de Overleaf. Hay un ejemplo visible en [UALmemoriaPlantilla.pdf](UALmemoriaPlantilla.pdf)
+
 
 ## Estructura de la plantilla
 
@@ -83,19 +84,6 @@ Estilos disponibles:
 - R, R-color
 - Matlab, Matlab-color
 - Latex, Latex-color
-
-### Añadiendo figuras
-
-Para añadir figuras, usa el entorno `figure`:
-
-```tex
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Figuras/nombre_figura.png}
-    \caption{Descripción de la figura}
-    \label{fig:etiqueta}
-\end{figure}
-```
 
 ## Personalización adicional
 
